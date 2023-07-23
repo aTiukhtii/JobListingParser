@@ -22,14 +22,15 @@ public class JobListing {
     private String logoLink;
     private String organizationUrl;
     private String laborFunction;
-    private String JobPageURL;
+    private String jobPageUrl;
 
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
     private Long postedDate;
 
     @ElementCollection
-    @CollectionTable(name = "job_listing_locations", joinColumns = @JoinColumn(name = "job_listing_id"))
+    @CollectionTable(name = "job_listing_locations",
+            joinColumns = @JoinColumn(name = "job_listing_id"))
     @Column(name = "location")
     private List<String> locations;
 
