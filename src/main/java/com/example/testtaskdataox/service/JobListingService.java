@@ -8,4 +8,8 @@ public interface JobListingService {
     List<JobListing> scrapeAndSaveJobListings(String jobFunction);
 
     List<JobListing> getAllWithSort(Sort sort);
+
+    List<JobListing> findAll();
+
+    List<JobListing> findAllByLocationsContaining(String location);
 }

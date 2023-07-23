@@ -36,10 +36,4 @@ public class ParsingJobListing {
         }
         return orders;
     }
-
-    public static List<JobListing> filterByLocation(List<JobListing> jobListings, String location) {
-        return jobListings.stream()
-                .filter(jobListing -> jobListing.getLocations().contains(location))
-                .collect(Collectors.toList());
-    }
 }
