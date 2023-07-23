@@ -107,7 +107,8 @@ public class JobListingScraperImpl implements JobListingScraper {
     }
 
     private void scrollPage(WebDriver driver) {
-        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, arguments[0]);", JobListingScraperImpl.SCROLL_PAGE_PIXELS);
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, arguments[0]);", 
+                JobListingScraperImpl.SCROLL_PAGE_PIXELS);
     }
 
     private void scrollElementIntoView(WebDriver driver) {
