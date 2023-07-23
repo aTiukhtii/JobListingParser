@@ -2,7 +2,6 @@ package com.example.testtaskdataox.service;
 
 import com.example.testtaskdataox.exception.InvalidUrlException;
 import com.example.testtaskdataox.model.JobListing;
-import com.example.testtaskdataox.repository.JobListingRepository;
 import java.io.IOException;
 import java.net.URL;
 import java.text.ParseException;
@@ -36,10 +35,10 @@ public class JobListingScraperImpl implements JobListingScraper {
     private static final int WEBDRIVER_TIMEOUT = 5;
     private static final int SCROLL_PAGE_PIXELS = 700;
     private static final int SCROLL_ELEMENT_PIXELS = 300;
-    private final JobListingRepository jobListingRepository;
+    private final JobListingService jobListingService;
 
-    public JobListingScraperImpl(JobListingRepository jobListingRepository) {
-        this.jobListingRepository = jobListingRepository;
+    public JobListingScraperImpl(JobListingService jobListingService) {
+        this.jobListingService = jobListingService;
     }
 
     @Override
@@ -141,7 +140,7 @@ public class JobListingScraperImpl implements JobListingScraper {
     }
 
     private JobListing save(JobListing jobListing) {
-        return jobListingRepository.save(jobListing);
+        return jobListingService.save(jobListing);
     }
 
     private Document getPage(String url) {

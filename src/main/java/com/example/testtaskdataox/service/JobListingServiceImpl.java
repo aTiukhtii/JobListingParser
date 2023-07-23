@@ -15,6 +15,11 @@ public class JobListingServiceImpl implements JobListingService {
     }
 
     @Override
+    public JobListing save(JobListing jobListing) {
+        return jobListingRepository.save(jobListing);
+    }
+
+    @Override
     public List<JobListing> getAllWithSort(Sort sort) {
         return jobListingRepository.findAll(sort);
     }
