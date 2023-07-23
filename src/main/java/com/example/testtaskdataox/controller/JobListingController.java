@@ -4,6 +4,8 @@ import static com.example.testtaskdataox.util.ParsingJobListing.parsing;
 
 import com.example.testtaskdataox.model.JobListing;
 import com.example.testtaskdataox.service.JobListingScraper;
+import com.example.testtaskdataox.service.JobListingScraperImpl;
+import com.example.testtaskdataox.service.JobListingService;
 import java.util.List;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,11 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/scrapeJobListings")
 public class JobListingController {
+    private final JobListingService jobListingService;
+    private final JobListingScraper jobListingScraperImpl;
 
-    private final JobListingScraper jobListingScraper;
-
-    public JobListingController(JobListingScraper jobListingScraper) {
-        this.jobListingScraper = jobListingScraper;
+    public JobListingController(JobListingService jobListingService,
+                                JobListingScraperImpl jobListingScraperImpl) {
+        this.jobListingService = jobListingService;
+        this.jobListingScraperImpl = jobListingScraperImpl;
     }
 
     @GetMapping
@@ -26,10 +30,10 @@ public class JobListingController {
                                               @RequestParam(defaultValue = "id") String sortBy,
                                               @RequestParam(required = false) String location) {
         Sort sort = Sort.by(parsing(sortBy));
-        jobListingScraper.scrapeAndSaveJobListings(jobFunction);
-        List<JobListing> jobListings = jobListingScraper.getAllWithSort(sort);
+        jobListingScraperImpl.scrapeAndSaveJobListings(jobFunction);
+        List<JobListing> jobListings = jobListingService.getAllWithSort(sort);
         if (location != null && !location.isEmpty()) {
-            jobListings = jobListingScraper.findAllByLocationsContaining(location);
+            jobListings = jobListingService.findAllByLocationsContaining(location);
         }
         return jobListings;
     }
@@ -37,6 +41,6 @@ public class JobListingController {
     @GetMapping("/all")
     public List<JobListing> getAllJobListings(@RequestParam(defaultValue = "id") String sortBy) {
         Sort sort = Sort.by(parsing(sortBy));
-        return jobListingScraper.getAllWithSort(sort);
+        return jobListingService.getAllWithSort(sort);
     }
 }
