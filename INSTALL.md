@@ -45,6 +45,7 @@ Replace `<JOB_FUNCTION>` with the desired field to sort the results.
 - For example, if you make the following query: http://localhost:8080/scrapeJobListings?jobFunction=IT&sortBy=postedDate&location=New%20York, you will receive results similar to the image shown below:
   ![example-result.png](src%2Fmain%2Fresources%2Fexample-result.png)
 ### ✅ Available Job Functions 
+
 1. Data Science
 2. Design
 3. IT
