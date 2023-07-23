@@ -35,7 +35,7 @@ Users can use various API endpoints to interact with the data and retrieve job l
     laborFunction (String): The labor function of the job.
     jobPageUrl (String): The URL of the job listing's page.
     description (String): The description of the job listing with TEXT column definition.
-    pstedDate (Long): The timestamp representing the date when the job listing was posted.
+    postedDate (Long): The timestamp representing the date when the job listing was posted.
     locations (List of Strings): A list of locations associated with the job listing.
     tags (List of Strings): A list of tags associated with the job listing.
 
