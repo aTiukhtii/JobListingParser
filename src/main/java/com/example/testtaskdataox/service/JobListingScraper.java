@@ -99,6 +99,16 @@ public class JobListingScraper implements JobListingService {
         return jobListingRepository.findAll(sort);
     }
 
+    @Override
+    public List<JobListing> findAll() {
+        return jobListingRepository.findAll();
+    }
+
+    @Override
+    public List<JobListing> findAllByLocationsContaining(String location) {
+        return jobListingRepository.findAllByLocationsContaining(location);
+    }
+
     private WebElement getJobFunctionDropdown(WebDriver driver, String jobFunction) {
         WebElement element;
         try {
