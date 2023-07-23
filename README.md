@@ -25,20 +25,18 @@ Users can use various API endpoints to interact with the data and retrieve job l
 - [util](src%2Fmain%2Fjava%2Fcom%2Fexample%2Ftesttaskdataox%2Futil) - utility sorting class
 - [model](src%2Fmain%2Fjava%2Fcom%2Fexample%2Ftesttaskdataox%2Fmodel) - 
   The JobListing class represents a data model for job listings and includes the following attributes:
-
-
-    id (Long): The unique identifier for each job listing.
-    positionName (String): The name of the position for the job listing.
-    organizationTitle (String): The title of the organization associated with the job listing.
-    logoLink (String): The link to the logo of the organization.
-    organizationUrl (String): The URL of the organization's website.
-    laborFunction (String): The labor function of the job.
-    jobPageUrl (String): The URL of the job listing's page.
-    description (String): The description of the job listing with TEXT column definition.
-    postedDate (Long): The timestamp representing the date when the job listing was posted.
-    locations (List of Strings): A list of locations associated with the job listing.
-    tags (List of Strings): A list of tags associated with the job listing.
-
+  
+  - id (Long): The unique identifier for each job listing.
+  - positionName (String): The name of the position for the job listing.
+  -  organizationTitle (String): The title of the organization associated with the job listing.
+  - logoLink (String): The link to the logo of the organization.
+  -  organizationUrl (String): The URL of the organization's website.
+  -  laborFunction (String): The labor function of the job.
+  -  jobPageUrl (String): The URL of the job listing's page.
+  -  description (String): The description of the job listing with TEXT column definition.
+  -  postedDate (Long): The timestamp representing the date when the job listing was posted.
+  -  locations (List of Strings): A list of locations associated with the job listing.
+  -  tags (List of Strings): A list of tags associated with the job listing.
 #### resources/
 - [application.properties](src%2Fmain%2Fresources%2Fapplication.properties) - contains database configuration
 - [database_dump.sql](src%2Fmain%2Fresources%2Fdatabase_dump.sql) - contains dump of database
