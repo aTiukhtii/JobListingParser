@@ -38,4 +38,9 @@ public class JobListingController {
         }
         return jobListings;
     }
+
+    @GetMapping("/all")
+    public List<JobListing> getAllJobListings() {
+        return jobListingRepository.findAll();
+    }
 }
