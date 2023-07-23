@@ -42,6 +42,8 @@ Users can use various API endpoints to interact with the data and retrieve job l
 #### resources/
 - [application.properties](src%2Fmain%2Fresources%2Fapplication.properties) - contains database configuration
 - [database_dump.sql](src%2Fmain%2Fresources%2Fdatabase_dump.sql) - contains dump of database
+- [example-result.png](src%2Fmain%2Fresources%2Fexample-result.png) - contains example result
+- [credentials.png](src%2Fmain%2Fresources%2Fcredentials.png) - contains default credentials
 
 #### other/
 
