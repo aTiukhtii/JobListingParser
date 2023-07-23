@@ -41,7 +41,7 @@ Replace `<SORT_BY>` with the desired field to sort the results.
 
 Replace `<JOB_FUNCTION>` with the desired field to sort the results.
 
-- For example for the query http://localhost:8080/scrapeJobListings?jobFunction=IT&sortBy=postedDate&location=New%20York you will get
+- For example for the query http://localhost:8080/scrapeJobListings?jobFunction=IT&sortBy=postedDate&location=New%20York you will get in your db:
 ![example-result.png](src%2Fmain%2Fresources%2Fexample-result.png)
 ### Available Job Functions 
 1. Data Science
