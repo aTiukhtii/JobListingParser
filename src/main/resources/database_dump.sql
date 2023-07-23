@@ -1,10 +1,12 @@
-CREATE SCHEMA IF NOT EXISTS `job-scraping` DEFAULT CHARACTER SET utf8;
-USE `job-scraping`;
+CREATE SCHEMA IF NOT EXISTS `rest` DEFAULT CHARACTER SET utf8;
+USE `rest`;
+ALTER TABLE `job_listing_locations` DROP FOREIGN KEY `FKdt2k13tmspvadi2fncudaqan1`;
+ALTER TABLE `job_listing_tags` DROP FOREIGN KEY `FKt36syd5v7sk65gs3n1yjvrde8`;
 DROP TABLE IF EXISTS `job_listing`;
 CREATE TABLE `job_listing` (
                                `id` bigint(20) NOT NULL AUTO_INCREMENT,
                                `posted_date` bigint(20) DEFAULT NULL,
-                               `description` text,
+                               `description` text CHARACTER SET utf8mb4,
                                `job_page_url` varchar(255) DEFAULT NULL,
                                `labor_function` varchar(255) DEFAULT NULL,
                                `logo_link` varchar(255) DEFAULT NULL,
