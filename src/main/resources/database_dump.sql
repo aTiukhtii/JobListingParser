@@ -1,7 +1,5 @@
-CREATE SCHEMA IF NOT EXISTS `rest` DEFAULT CHARACTER SET utf8;
-USE `rest`;
-ALTER TABLE `job_listing_locations` DROP FOREIGN KEY `FKdt2k13tmspvadi2fncudaqan1`;
-ALTER TABLE `job_listing_tags` DROP FOREIGN KEY `FKt36syd5v7sk65gs3n1yjvrde8`;
+CREATE SCHEMA IF NOT EXISTS `job-listing-scraper` DEFAULT CHARACTER SET utf8;
+USE `job-listing-scraper`;
 DROP TABLE IF EXISTS `job_listing`;
 CREATE TABLE `job_listing` (
                                `id` bigint(20) NOT NULL AUTO_INCREMENT,
