@@ -41,7 +41,7 @@ Replace `<SORT_BY>` with the desired field to sort the results.
 
 Replace `<JOB_FUNCTION>` with the desired field to sort the results.
 
-- As an illustration, you can access a SQL database containing the outcomes of the "Software Jobs" dump, which can be downloaded from Google Drive at this link: https://drive.google.com/file/d/1pufSjCr4ARrIZtLie4ny2y69uo7dPvln/view?usp=sharing
+- As an illustration, you can access a SQL database containing the outcomes of the "Software Jobs" dump, which can be downloaded from Google Drive at this link: https://drive.google.com/file/d/1_FZ3XgJDWrwwmANQWWTGklZF8YoqdAxx/view?usp=sharing
 - For example, if you make the following query: http://localhost:8080/scrapeJobListings?jobFunction=IT&sortBy=postedDate&location=New%20York, you will receive results similar to the image shown below:
   ![example-result.png](src%2Fmain%2Fresources%2Fexample-result.png)
 ### ✅ Available Job Functions 
