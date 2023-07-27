@@ -2,7 +2,7 @@
 
 ### 📄 Project description:
 
-Test Task DataOX is a web application that allows users to scrape job listings from the Techstars Jobs website and store them in a database. 
+Job Listing Parser is a web application that allows users to scrape job listings from the Techstars Jobs website and store them in a database. 
 The application is built using Spring Boot and utilizes Selenium WebDriver to interact with the website and fetch job listings. 
 Users can use various API endpoints to interact with the data and retrieve job listings based on different criteria.
 
